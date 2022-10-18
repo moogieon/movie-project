@@ -23,8 +23,8 @@ const Header = () => {
         <img src={Logo} alt="mookcah logo" />
       </div>
       <ul>
-        {menyList.map((menu) => (
-          <li>{menu.name}</li>
+        {menyList.map((menu,i) => (
+          <li key={i}>{menu.name}</li>
         ))}
       </ul>
       <button onClick={onDarkToggle} className="dark:text-white">

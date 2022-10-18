@@ -1,9 +1,15 @@
 const MovieList = () => {
   return (
-    <div w-p="x-5">
+    <div>
       <div w-grid="~ cols-4" w-gap="10" w-container="~">
-        {new Array(10).fill(0).map((data) => (
-          <div w-border="~" w-w="full" w-h="150px" w-text="dark:white">
+        {new Array(10).fill(0).map((data, i) => (
+          <div
+            key={i}
+            w-border="~ black dark:white"
+            w-w="full"
+            w-h="150px"
+            w-text="dark:white"
+          >
             {data}
           </div>
         ))}
