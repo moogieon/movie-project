@@ -7,15 +7,15 @@ import {
 } from "react";
 
 const Slider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideRef = useRef<HTMLInputElement | any>(null);
-
   const movieLIst = [
     { name: "어벤져스1", since: "2014", img: "", genre: ["action", "romance"] },
     { name: "어벤져스2", since: "2014", img: "", genre: ["action", "romance"] },
     { name: "어벤져스3", since: "2014", img: "", genre: ["action", "romance"] },
     { name: "어벤져스4", since: "2014", img: "", genre: ["action", "romance"] },
   ];
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slideRef = useRef<HTMLInputElement | any>(null);
+
   const Total = movieLIst.length - 1;
   const nextSlide = () => {
     if (currentSlide >= Total) {
