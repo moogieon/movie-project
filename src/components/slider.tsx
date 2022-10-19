@@ -22,8 +22,6 @@ const Slider = () => {
       setCurrentSlide(0);
     } else {
       setCurrentSlide(currentSlide + 1);
-      slideRef.current.style.transition = "all 0.5s ease-in-out";
-      slideRef.current.style.transform = `translateX(-${currentSlide + 1}00%)`;
     }
   };
   const prevList = () => {
@@ -31,20 +29,13 @@ const Slider = () => {
       setCurrentSlide(Total);
     } else {
       setCurrentSlide(currentSlide - 1);
-      slideRef.current.style.transition = "all 0.5s ease-in-out";
-      slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
     }
   };
 
-  console.log(Total);
+  console.log(currentSlide);
   useEffect(() => {
-    // if (currentSlide === 0) {
-    //   setCurrentSlide(Total - 1);
-    //   setTimeout(() => {
-    //     (slideRef.current.style.transform = `translateX(-${Total - 2}00%)`),
-    //       (slideRef.current.style.transition = "0ms");
-    //   }, 500);
-    // }
+    slideRef.current.style.transition = "all 0.5s ease-in-out";
+    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
   }, [currentSlide]);
   return (
     <div
